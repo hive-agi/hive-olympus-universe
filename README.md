@@ -1,8 +1,8 @@
 # hive-olympus-universe
 
 Olympus on the universe canvas. A manifest-only
-[hive-olympus](../hive-olympus) harness brick that posts the agent grid into
-[hive-universe](../hive-universe)'s conversation, one utterance per tab.
+[hive-olympus](https://github.com/hive-agi/hive-olympus) harness brick that posts the agent grid into
+hive-universe's conversation, one utterance per tab.
 
 ```clojure
 {:addon/id "hive.olympus.universe"
