@@ -29,13 +29,13 @@ prefixed with `[olympus/tab-1]` and posted as one utterance.
 ## Tests
 
 ```bash
-clojure -Sdeps "$(cat local.deps.edn)" -M:test    # hermetic: the manifest through the real mounter
+clojure -M:test                                   # hermetic: published deps only
 clojure -Sdeps "$(cat local.deps.edn)" -M:proof   # the above, plus the live canvas proof
 ```
 
-`-M:test` needs hive-olympus and hive-vessel and mounts the brick against a
-recording `:text` stub, then against the real `hive.olympus` core with six
-agents on two tabs.
+`-M:test` resolves entirely from Clojars and needs no checkout. It mounts the
+brick against a recording `:text` stub, then against the real `hive.olympus`
+core with six agents on two tabs.
 
 `-M:proof` additionally needs the hive-universe checkout, because it drives the
 real refresh loop onto a real canvas and reads the transcript back through

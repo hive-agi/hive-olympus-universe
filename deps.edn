@@ -3,7 +3,7 @@
  ;; Sibling checkouts during development go in the untracked local.deps.edn:
  ;;   clojure -Sdeps "$(cat local.deps.edn)" -M:test
  :deps {org.clojure/clojure {:mvn/version "1.12.6"}
-        io.github.hive-agi/hive-olympus {:mvn/version "0.1.7"}}
+        io.github.hive-agi/hive-olympus {:mvn/version "0.1.9"}}
 
  :aliases
  {;; hive-vessel: the :host-target route lowers through its standard registry.
