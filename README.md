@@ -26,6 +26,22 @@ The dialect is `:text`, so what reaches the canvas is already-rendered lines.
 A canvas is a scrolling conversation with no windows, so each panel's lines are
 prefixed with `[olympus/tab-1]` and posted as one utterance.
 
+## Watch it
+
+```bash
+clojure -Sdeps "$(cat local.deps.edn)" -M:demo          # a synthetic swarm, moving
+clojure -Sdeps "$(cat local.deps.edn)" -M:demo --live   # the real hive swarm
+```
+
+Boots the manager's default universe, installs it as the say-channel, mounts
+`hive.olympus` and this brick against a host exposing only `:vessel/target`, and
+hands over the terminal. The grid arrives as `[olympus/tab-1]` utterances and
+repaints as the swarm changes. `/quit` to leave; the universe keeps running.
+
+`--live` drops the synthetic roster, so Olympus falls back to its default: the
+hive swarm, lings at depth 1. Outside a hive that is an empty grid, which is
+itself the honest answer.
+
 ## Tests
 
 ```bash

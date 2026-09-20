@@ -4,4 +4,4 @@
  :license "MIT"
  :language :clojure
  :tags [:hive :olympus :addon :vessel :universe :foss]
- :carto {:source-roots ["../hive-universe/test" "resources" "test"]}}
+ :carto {:source-roots ["../hive-universe/test" "dev" "resources" "test"]}}
