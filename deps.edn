@@ -9,7 +9,7 @@
  {;; hive-vessel: the :host-target route lowers through its standard registry.
   ;; In a hive it arrives with hive.universe; the stub host here has to bring it.
   :test {:extra-paths ["test"]
-         :extra-deps {io.github.hive-agi/hive-vessel {:mvn/version "0.1.8"}}
+         :extra-deps {io.github.hive-agi/hive-vessel {:mvn/version "0.1.11"}}
          :jvm-opts ["-Xmx1g"]
          :main-opts ["-m" "hive-olympus-universe.test-runner"]}
 
@@ -18,7 +18,7 @@
   ;; is where the port-conformance-proven AtomUniverse lives.
   ;;   clojure -Sdeps "$(cat local.deps.edn)" -M:proof
   :proof {:extra-paths ["test" "../hive-universe/test"]
-          :extra-deps {io.github.hive-agi/hive-vessel {:mvn/version "0.1.8"}}
+          :extra-deps {io.github.hive-agi/hive-vessel {:mvn/version "0.1.11"}}
           :jvm-opts ["-Xmx1g"]
           :main-opts ["-m" "hive-olympus-universe.proof-runner"]}
 
@@ -27,7 +27,7 @@
   ;; :shell alias, which a :local/root cannot contribute, so they are named here.
   ;;   clojure -Sdeps "$(cat local.deps.edn)" -M:demo [--live]
   :demo {:extra-paths ["dev"]
-         :extra-deps {io.github.hive-agi/hive-vessel {:mvn/version "0.1.8"}
+         :extra-deps {io.github.hive-agi/hive-vessel {:mvn/version "0.1.11"}
                       org.replikativ/spindel {:mvn/version "0.1.47"}
                       org.replikativ/spindel-tui {:mvn/version "0.1.14"}
                       io.github.hive-agi/hive-events
