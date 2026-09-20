@@ -1,0 +1,7 @@
+{:project-id "hive-olympus-universe"
+ :parent "hive"
+ :description "Olympus projected onto the hive-universe canvas: a manifest-only hive-olympus harness brick over hive.universe's :vessel/target"
+ :license "MIT"
+ :language :clojure
+ :tags [:hive :olympus :addon :vessel :universe :foss]
+ :carto {:source-roots ["../hive-universe/test" "resources" "test"]}}

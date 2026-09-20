@@ -1,0 +1,23 @@
+{:paths ["resources"]
+
+ ;; Sibling checkouts during development go in the untracked local.deps.edn:
+ ;;   clojure -Sdeps "$(cat local.deps.edn)" -M:test
+ :deps {org.clojure/clojure {:mvn/version "1.12.6"}
+        io.github.hive-agi/hive-olympus {:mvn/version "0.1.7"}}
+
+ :aliases
+ {;; hive-vessel: the :host-target route lowers through its standard registry.
+  ;; In a hive it arrives with hive.universe; the stub host here has to bring it.
+  :test {:extra-paths ["test"]
+         :extra-deps {io.github.hive-agi/hive-vessel {:mvn/version "0.1.8"}}
+         :jvm-opts ["-Xmx1g"]
+         :main-opts ["-m" "hive-olympus-universe.test-runner"]}
+
+  ;; The live proof: the real Olympus refresh loop onto a real universe canvas.
+  ;; Needs the hive-universe checkout (local.deps.edn) and its test root, which
+  ;; is where the port-conformance-proven AtomUniverse lives.
+  ;;   clojure -Sdeps "$(cat local.deps.edn)" -M:proof
+  :proof {:extra-paths ["test" "../hive-universe/test"]
+          :extra-deps {io.github.hive-agi/hive-vessel {:mvn/version "0.1.8"}}
+          :jvm-opts ["-Xmx1g"]
+          :main-opts ["-m" "hive-olympus-universe.proof-runner"]}}}

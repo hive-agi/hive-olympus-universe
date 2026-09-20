@@ -1,0 +1,12 @@
+{:addon/id "hive.olympus.universe"
+ :addon/kind :addon
+ :addon/type :native
+ :addon/version "0.1.0-SNAPSHOT"
+ :addon/init-ns "hive-olympus.harness"
+ :addon/init-fn "addon-ctor"
+ :addon/config {:olympus/host "hive.universe"}
+ :addon/capabilities #{:olympus-presenter :health-reporting}
+ :addon/dependencies #{"hive.olympus" "hive.universe"}
+ :addon/description "Olympus on the universe canvas: the hive.olympus grid posted as one utterance per tab, lowered to :text by hive-vessel onto hive.universe's :vessel/target"
+ :addon/maturity :experimental
+ :addon/trust-class :foss}
