@@ -28,7 +28,7 @@
   ;;   clojure -Sdeps "$(cat local.deps.edn)" -M:demo [--live]
   :demo {:extra-paths ["dev"]
          :extra-deps {io.github.hive-agi/hive-vessel {:mvn/version "0.1.12"}
-                      org.replikativ/spindel {:mvn/version "0.1.52"}
+                      org.replikativ/spindel {:mvn/version "0.1.54"}
                       org.replikativ/spindel-tui {:mvn/version "0.1.14"}
                       io.github.hive-agi/hive-events
                       {:git/tag "v0.5.18" :git/sha "4c65144"}}
